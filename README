@@ -16,11 +16,9 @@ Enter into settings and select "Build static binary (no shared libs)"
 BusyBox configuration is done, execute "cd .." to go back to the root folder
 
 ## Building Linux Kernel and RootFS
-To build Linux, execute "make kernel".
+To build the Linux kernel and Root filesystem, execute "make all". 
 
-To build our rootfs with busybox, execute "make rootfs"
-
-The appropriate files of our driver and application can be packaged into the rootfs with "make install"
+This will also build the UART kernel module and install it into the rootfs
 
 # To Run
 Execute "make qemu" to load into linux.
