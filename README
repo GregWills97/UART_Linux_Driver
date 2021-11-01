@@ -1,0 +1,19 @@
+UART Linux kernel driver for the QEMU versatilepb board. The kernel module comes with an application "uart_echo" to test in userspace.
+
+
+#To Build
+First the kernel must be built, execute "make kernel".
+
+Now build the uart kernel driver with "make uart_module"
+
+The appropriate files can be packaged into the rootfs with "make install"
+
+
+#To Run
+Execute "make qemu" to load into linux.
+
+First execute the initialization script for the uart module which resides in "/etc/init.d/vpb-uart-init"
+
+This will create our device under the "/dev" directory
+
+Run the test application with "uart_echo"

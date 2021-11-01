@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Mount filesystems
+mount -t proc none /proc
+mount -t sysfs none /sys
+
+#Initialize Devices
+mknod -m 660 /dev/mem c 1 1
+
+#Start services
+#./etc/init.d/*
+
+#Enter shell
+exec /bin/sh
+
