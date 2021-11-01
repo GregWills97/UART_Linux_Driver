@@ -17,6 +17,7 @@ kernel:
 rootfs:
 	make -j8 -C $(BUSY_BOX) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
 	make -C $(BUSY_BOX) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- install
+	mkdir $(ROOTFS_DIR)
 	cp -av $(BUSY_BOX)/_install/* $(ROOTFS_DIR)/
 	mkdir -p $(ROOTFS_DIR)/etc
 	mkdir -p $(ROOTFS_DIR)/lib
