@@ -1,15 +1,28 @@
 UART Linux kernel driver for the QEMU versatilepb board. The kernel module comes with an application "uart_echo" to test in userspace.
 
 
-#To Build
-First the kernel must be built, execute "make kernel".
+# To Build
+First use git to clone the most recent versions of busybox and the linux kernel. 
 
-Now build the uart kernel driver with "make uart_module"
+## Configuring BusyBox
+We will have to manually configure BusyBox. Enter into the busy box and execute:
+	"make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- defconfig"
 
-The appropriate files can be packaged into the rootfs with "make install"
+Next bring up the menu configuration with:
+	"make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig"
 
+Enter into settings and select "Build static binary (no shared libs)"
 
-#To Run
+BusyBox configuration is done, execute "cd .." to go back to the root folder
+
+## Building Linux Kernel and RootFS
+To build Linux, execute "make kernel".
+
+To build our rootfs with busybox, execute "make rootfs"
+
+The appropriate files of our driver and application can be packaged into the rootfs with "make install"
+
+# To Run
 Execute "make qemu" to load into linux.
 
 First execute the initialization script for the uart module which resides in "/etc/init.d/vpb-uart-init"
