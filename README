@@ -2,7 +2,7 @@ UART Linux kernel driver for the QEMU versatilepb board. The kernel module comes
 
 
 # To Build
-First use git to clone the most recent versions of busybox and the linux kernel. 
+First use git to clone the most recent versions of busybox and the linux kernel. Make sure the directories in the Makefile are pointing to the correct location
 
 ## Configuring BusyBox
 We will have to manually configure BusyBox. Enter into the busy box and execute:
