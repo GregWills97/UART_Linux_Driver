@@ -45,4 +45,4 @@ clean:
 	make -C $(KERN_SRC) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- clean
 	make -C $(BUSY_BOX) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- clean
 	rm $(ROOTFS_DIR)/lib/modules/vpb_uart.ko $(ROOTFS_DIR)/usr/bin/uart_echo $(MODULE_SRC)/uart_echo
-	rm -rf $(SRC_DIR)/rootfs.cpio.gz $(ROOTFS_DIR)/*
+	rm -rf $(SRC_DIR)/rootfs.cpio.gz $(ROOTFS_DIR)
