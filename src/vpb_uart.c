@@ -6,7 +6,7 @@ struct vpb_uart_dev *vpb_uart;
 int vpb_uart_major = 0;
 int vpb_uart_minor = 0;
 
-MODULE_AUTHOR("Team 1");
+MODULE_AUTHOR("Gregory Williams");
 MODULE_LICENSE("GPL v2");
 
 
